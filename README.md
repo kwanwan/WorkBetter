@@ -55,7 +55,7 @@ You will use Wercker (Oracle Container Pipeline) as the core CI/CD software life
 This demo requires the Oracle Container Engine for Managed Kubernetes Service (OKE) as the runtime platform.
 
 - If you do not already have an OKE cluster, you must provision one before you can run the demo.
-- Please follow the instruction here to provision your OKE cluster [OKE Setup Link](https://github.com/kwanwan/WorkBetter/blob/master/OKEsetup.md).
+- Please follow the instruction here to provision your OKE cluster [OKE Setup Link](OKEsetup.md).
 
 
 ## Provision a Wercker Application
@@ -63,7 +63,7 @@ This demo requires the Oracle Container Engine for Managed Kubernetes Service (O
 This demo also requires Wercker to orchestrate the build and deployment of the Work Better application to an OKE cluster. This involves configure Wercker pipelines and workflow.
 
 - If you do not already have Wercker setup for Work Better, you must create and configure one before you can run the demo.
-- Please follow the instruction here to create your Work Better application in Wercker [Wercker Setup Link](https://github.com/kwanwan/WorkBetter/blob/master/WERCKERsetup.md).
+- Please follow the instruction here to create your Work Better application in Wercker [Wercker Setup Link](WERCKERsetup.md).
 
 
 ## Demo Steps
