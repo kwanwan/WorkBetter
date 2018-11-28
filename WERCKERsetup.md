@@ -69,7 +69,7 @@ To create an application (aka project) in Wercker, you need to log in to Wercker
 
 
 
-  ### **Step 4**: Create a Pipelines and Workflow in Wercker
+### **Step 4**: Create a Pipelines and Workflow in Wercker
 
 We will now create the pipelines **functional-test** and **deploy**. There will be a corresponding implementation of these pipelines in the `wercker.yml` file in your WorkBetter repo.
 
