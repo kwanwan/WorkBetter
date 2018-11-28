@@ -12,14 +12,14 @@
 
 This repository contains the script for the WorkBetter application demo. This demo will walk you through the process of developing an application in a containerised CI/CD pipeline and deploying it to a Kubernetes cluster running on Oracle Cloud Infrastructure.
 
-You will take on the role of a developer, responsible for configuring the automated build and deploy process that involve details about the application itself. To containerise and automate the building and deploying of this application you will make use of Wercker Pipelines, Oracle Container Registry, and Oracle Cloud Infrastrastructure. The Kubernetes infrastructure will be configured and provisioned through Terraform Installer.
+You will take on the role of a developer, responsible for configuring the automated build and deploy process that involve details about the application itself. To containerise and automate the building and deploying of this application you will make use of Wercker Pipelines, Oracle Container Registry, and Oracle Cloud Infrastructure. The Kubernetes infrastructure will be configured and provisioned through Terraform Installer.
 
 On every pipeline execution, the code goes through the following steps:
 
 1. Code is pulled from GitHub, built, tested and deployed to Kubernetes
 2. The Docker image is pushed to the internal Oracle Container Registry
 3. The application is then tested
-3. If passed, the image will be pulled from the registy and deployed to the Kubernetes cluster
+3. If passed, the image will be pulled from the registry and deployed to the Kubernetes cluster
 
 
 ## Time to Complete
@@ -29,9 +29,9 @@ Approximately 15 minutes
 
 ## Scenario
 
-You are an application developer who is developing a container native HR application using JET for building the web application to be used in a browser from a mobile phone up to desptop. This web application is designed as a microservice to run in a Docker container and deployed to Kubenetes.
+You are an application developer who is developing a container native HR application using JET for building the web application to be used in a browser from a mobile phone or a desktop. This web application is designed as a microservice to run in a Docker container and deployed to Kubernetes.
 
-The reason why you want to adopt a container native approach has partially been driven by the need to go to market quicker, by delivering new features more frequently, but also more reliably. And you are able to do this by developing Microservices that has less dependencies on other services, as well as the footprint being smaller, easier to deploy and starts up faster. What’s also attractive with Microservices is that you can use the best programming language for the job. To be able to deliver this new style of container native application approach, you will need to adopt the Agile development practice to continuously integrate and deliver these services and features. The application basically consists of the user interface that is built using Oracle JET framework, packaged as a Docker image and deployed to a Kubernetes cluster hosted on Oracle Cloud Infrastructure.
+The reason why you want to adopt a container native approach has partially been driven by the need to go to market quicker by delivering new features more frequently, but also more reliably. And you are able to do this by developing Microservices that has less dependencies on other services, as well as the footprint being smaller, easier to deploy and starts up faster. What’s also attractive with Microservices is that you can use the best programming language for the job. To be able to deliver this new style of container native application approach, you will need to adopt the Agile development practice to continuously integrate and deliver these services and features. The application basically consists of the user interface that is built using Oracle JET framework, packaged as a Docker image and deployed to a Kubernetes cluster hosted on Oracle Cloud Infrastructure.
 
 ![](images/0.1.png)
 
@@ -55,7 +55,7 @@ You will use Wercker (Oracle Container Pipeline) as the core CI/CD software life
 This demo requires the Oracle Container Engine for Managed Kubernetes Service (OKE) as the runtime platform.
 
 - If you do not already have an OKE cluster, you must provision one before you can run the demo.
-- Please follow the instruction here to provision your OKE cluster [OKE Setup Link](OKEsetup.md).
+- Please follow the instruction here to provision your OKE cluster [OKE Setup](OKEsetup.md).
 
 
 ## Provision a Wercker Application
@@ -63,14 +63,14 @@ This demo requires the Oracle Container Engine for Managed Kubernetes Service (O
 This demo also requires Wercker to orchestrate the build and deployment of the Work Better application to an OKE cluster. This involves configure Wercker pipelines and workflow.
 
 - If you do not already have Wercker setup for Work Better, you must create and configure one before you can run the demo.
-- Please follow the instruction here to create your Work Better application in Wercker [Wercker Setup Link](WERCKERsetup.md).
+- Please follow the instruction here to create your Work Better application in Wercker [Wercker Setup](WERCKERsetup.md).
 
 
 ## Demo Steps
 
 ### **Step 1**: Introduce the Work Better application
 
-Work Better is a HR web application written in JET. This web application is designed as a microservice to run in a Docker container and deployed to Kubenetes. It is continuously integrated and deployed to a Kubernetes cluster running on OCI.
+Work Better is a HR web application written in JET. This web application is designed as a microservice to run in a Docker container and deployed to Kubernetes. It is continuously integrated and deployed to a Kubernetes cluster running on OCI.
 
 * Go to the Work Better dashboard
 * Click on some of the items
@@ -120,18 +120,18 @@ You can define your application environment variables externally under the **Env
 
 ### **Step 5**: Walkthrough the Kubernetes dashboard
 
-You can monitor and manage your Kurbernetes cluster through its dashboard. Not everything can be managed from this console as the Kubernetes cluster is provisioned on Oracle Cloud Infrastructure. For more details please open the OCI console where you will find the master, worker, etcd and load balancer nodes.
+You can monitor and manage your Kubernetes cluster through its dashboard. Not everything can be managed from this console as the Kubernetes cluster is provisioned on Oracle Cloud Infrastructure. For more details please open the OCI console where you will find the master, worker, etcd and load balancer nodes.
 
 * Open the Kubernetes dashboard
-* Select **_Namespace_** and corralate it with the NS environment variable
+* Select **_Namespace_** and correlate it with the NS environment variable
 * Select **_Overview_** show all
 * Select **_Service_**
-* Highlight the **_External endpoints_**, this is the IP address to access the WorkBeter application
+* Highlight the **_External endpoints_**, this is the IP address to access the WorkBetter application
 
   ![](images/3.2.png)
 
 
-### **Step 6**: Demostrate a code change
+### **Step 6**: Demonstrate a code change
 
 We want to demonstrate how we can trigger a new build by making a code change. The profile picture for Steven King is presented in a square frame. We can change this to be presented in a circular frame.
 
@@ -174,7 +174,7 @@ Using the GitHub online editor is straight forward, however, this is not the pre
 
 #### **Step 7.2**: Changing the code in Brackets
 
-As I have the Brackets editor installed and synchronised with my GitHub repo, I can use Brackets to illustrate how I create a new branch for the code change and push it back to the repo to trigger the **build** and **functional-test** pipeline, but without excuting the **deploy** pipeline.
+As I have the Brackets editor installed and synchronised with my GitHub repo, I can use Brackets to illustrate how I create a new branch for the code change and push it back to the repo to trigger the **build** and **functional-test** pipeline, but without executing the **deploy** pipeline.
 
 * Open Brackets
 * Create a new branch **v1.1**
@@ -189,9 +189,6 @@ As I have the Brackets editor installed and synchronised with my GitHub repo, I 
   ![](images/8.png)
 
 
-
-### **Step 8**: Push change to GitHub
-
 We have now made the code change in the new **v1.1** branch and need to push the changes back to GitHub.
 
 * Click on **Commit** button to commit the changes
@@ -201,7 +198,7 @@ We have now made the code change in the new **v1.1** branch and need to push the
   ![](images/9.png)
 
 
-### **Step 9**: Monitor the pipeline execution
+### **Step 8**: Monitor the pipeline execution
 
 The moment we commit the Git push, the **build** pipeline would be triggered in Wercker. Please take note of the pipelines to be executed. The **build** and **functional-test** should be the only pipelines to be executed as the **deploy** pipeline is executed only on changes to the **_master_** branch. Since we have made the changes in a new branch, we can therefore test it without deploying it to production.
 
@@ -213,9 +210,11 @@ The moment we commit the Git push, the **build** pipeline would be triggered in 
   ![](images/10.png)
 
 
-### **Step 10**: Merge branch and deploy changes to environment
+### **Step 9**: Merge branch and deploy changes to environment
 
-If the previous pipelines completed sucessfully then we can commit the changes into the master branch by merging the **_v1.1_** to the **_master_**. This will automatically trigger a deployment by calling the **deploy** pipeline. Instead of using Brackets to merge the branches, lets use the GitHub editor instead as you can see the steps better visually.
+If the previous pipelines completed successfully then we can commit the changes into the master branch by merging the **_v1.1_** to the **_master_**. This will automatically trigger a deployment by calling the **deploy** pipeline.
+
+Instead of using Brackets to merge the branches lets use the GitHub editor instead as you can see the steps better visually.
 
 * Switch to GitHub editor
 * Create pull request
@@ -224,7 +223,7 @@ If the previous pipelines completed sucessfully then we can commit the changes i
   ![](images/14.png)
 
 
-### **Step 11**: Monitor the pipeline execution
+### **Step 10**: Monitor the pipeline execution
 
 Once we commit the merging of the **_master_** and **_v1.1_**, the workflow will be triggered. Please take note of the pipelines to be executed. This time we will execute the **deploy** pipeline as changes have been merged with the **_master_** branch.
 
@@ -236,12 +235,12 @@ Once we commit the merging of the **_master_** and **_v1.1_**, the workflow will
   ![](images/16.png)
 
 
-### **Step 12**: Reload the WorkBetter application
+### **Step 11**: Reload the WorkBetter application
 
-You can now see the changes by reloading your browser page. The key message is how agile it is to continuously integrate and deploy new features to the end users. And we shown the support of CI/CD with Wercker (Oracle Container Pipeline). With Wercker, the deployment can be to any Kurbenetes cluster but it will be even better with Oracle Kubernetes Engine which is a managed Kubernetes environment.
+You can now see the changes by reloading your browser page. The key message is how agile it is to continuously integrate and deploy new features to the end users. And we shown the support of CI/CD with Wercker (Oracle Container Pipeline). With Wercker, the deployment can be to any Kubernetes cluster but it will be even better with Oracle Kubernetes Engine which is a managed Kubernetes environment.
 
 * Reload WorkBetter dashboard in your browser
-* Observse the profile photo changed to a circular frame
+* Observe the profile photo changed to a circular frame
 
   ![](images/17.png)
 

@@ -22,7 +22,7 @@ Before you can use Wercker to build and deploy to a OKE cluster, you must have a
 
   ![](images/70.png)
 
-  **NOTE:** If prompted, choose to fork the repository to your account (this may occur if your account is also a member of an organization on GitHub).
+  **NOTE:** If prompted, choose to fork the repository to your account (this may occur if your account is also a member of an organisation on GitHub).
 
 
 
@@ -44,7 +44,7 @@ It is assumed you already have a Wercker account. Use your account to log into W
 ### **Step 3**: Create a Wercker Application
 
 
-To create an application (aka project) in Wercker, you need to log in to Wercker with a GitHub account. Your Wercker account should be associated with your GitHub accout when you signed up.
+To create an application (aka project) in Wercker, you need to log in to Wercker with a GitHub account. Your Wercker account should be associated with your GitHub account when you signed up.
 
 
 - Once logged in, click on the **+** sign icon on the top right hand corner of the page and select **Add application** from the drop down list.
@@ -124,7 +124,7 @@ We will now create the pipelines **functional-test** and **deploy**. There will 
   ```
   Key:              Value:
   NS                <name of your namespace> (e.g. demo)
-  KUBERNETES_MASTER <Kubenetes master node IP> (Find this in kubeconfig. e.g. https://xxx.xxx.xxx.xxx:6443)
+  KUBERNETES_MASTER <Kubernetes master node IP> (Find this in kubeconfig. e.g. https://xxx.xxx.xxx.xxx:6443)
   KUBERNETES_TOKEN  <Kubernetes user token> (Find this in kubeconfig.)
   DOCKER_USER       <tenancy name>/<user> (Use your OCI user. e.g. gse000111111/api.user)
   DOCKER_PASSWORD   <auth_token> (OCI user generated Auth token)
@@ -139,7 +139,7 @@ We will now create the pipelines **functional-test** and **deploy**. There will 
 
 We will now test the workflow by manually executing the workflow. The workflow would normally be trigger by a code commit to the repo. However, since we haven't made any changes to the code, we would need to manually execute the workflow manually.
 
-- Click the **Runs** tab within Wercker. Click **trigger a build now** at the bottom of the page manually excute the workflow.
+- Click the **Runs** tab within Wercker. Click **trigger a build now** at the bottom of the page manually execute the workflow.
 
     ![](images/87.png)
 

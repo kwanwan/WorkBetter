@@ -32,11 +32,11 @@ The following steps illustrates how you can provision and configure a Container 
 
 - Once you receive the **Oracle Cloud Account**, make note of your **Username, Password, Cloud Tenant Name and Console URL**.
 
-- Open your browser (Safari, Firefox or Chrome) and go to your Oracle Cloud Infrastrcuture Console URL. The OCI Console URL is:
+- Open your browser (Safari, Firefox or Chrome) and go to your Oracle Cloud Infrastructure Console URL. The OCI Console URL is:
 
    [https://console.us-ashburn-1.oraclecloud.com/#/a/](https://console.us-ashburn-1.oraclecloud.com/#/a/)
 
-   _This URL may be different to the one your are provided with. Use the provided URL if it is different to the above._
+   _This URL may be different to the one you are provided with. Use the provided URL if it is different to the above._
 
    _You can also access the OCI Console URL from your Cloud Dashboard._
 
@@ -88,7 +88,7 @@ The following steps illustrates how you can provision and configure a Container 
 
 To create and manage clusters in your tenancy, Container Engine must have access to all resources in the tenancy. To give Container Engine the necessary access, create a policy for the service as follows:
 
-- In the Console, click **Identity**, and then click **Policies**. A list of the policies in the compartment you're viewing is displayed.
+- In the Console, click **Identity**, and then click **Policies**. A list of the policies for the compartment you're viewing will be displayed.
 
 - Select the tenancy's **root** compartment from the list on the left
 
@@ -223,7 +223,7 @@ Create two additional security lists to the default `Default Security List for o
   - **Security List Name:** `oke-workers`
   - **Security List Name:** `oke-loadbalancers`
 
-There are two types of rules, Ingress and Egress, for both Workers and Load Balancer security lists. There 12 rules in total for the Worker Node Subnet and two rules in total for the Load Balancer Subnet.
+There are two types of rules, Ingress and Egress, for both Workers and Load Balancer security lists. There are 12 rules in total for the Worker Node Subnet and two rules in total for the Load Balancer Subnet.
 
 Let's create the security lists and rules.
 
@@ -481,7 +481,7 @@ There are different installation options and steps to install the CLI and requir
 To install and use the CLI, you must have:
   - An Oracle Cloud Infrastructure account (**api.user**)
   - A user created in that account, in a group with a policy that grants the desired permissions.
-  - A keypair used for signing API requests, with the public key uploaded to Oracle.
+  - A key pair used for signing API requests, with the public key uploaded to Oracle.
   - Python version 2.7.5 or 3.5 or later
 
 There are two ways for installing the CLI, Automatic or Manual. We recommend the Automatic way as this uses the CLI Installer to install all the dependencies.
@@ -553,8 +553,8 @@ You can now use `kubectl` and the Kubernetes Dashboard to perform operations on 
 
 Kubernetes Dashboard is a web-based user interface that you can use as an alternative to the Kubernetes kubectl command line tool to:
 
-- Deploy containerized applications to a Kubernetes cluster
-- Troubleshoot your containerized applications
+- Deploy containerised applications to a Kubernetes cluster
+- Troubleshoot your containerised applications
 
 You use the Kubernetes Dashboard to get an overview of applications running on a cluster, as well as to create or modify individual Kubernetes resources. The Kubernetes Dashboard also reports the status of Kubernetes resources in the cluster, and any errors that have occurred.
 
