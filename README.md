@@ -4,9 +4,9 @@
 
   - **master** branch uses Docker Hub for the registry
   - **ocir** branch uses Oracle Compute Infrastructure Registry
-  
+
   Please select branch accordingly as the *wercker.yml* file differs for different registries.
-  
+
 
 ## Demo Introduction
 
@@ -104,7 +104,7 @@ A Workflow in Wercker is how the automation of pipelines are managed. You can in
   * The **deploy** pipeline is triggered by a successful functional test with a condition for changed made to the **_master_** branch only. This enables the testing of code in a new branch before being merged into the master for release.
 
 
-  ![](images/3.png)
+    ![](images/3.png)
 
 
 ### **Step 4**: Walkthrough the application environment variables
@@ -247,5 +247,3 @@ You can now see the changes by reloading your browser page. The key message is h
 
 
 ## End
-
-
