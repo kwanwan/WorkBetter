@@ -8,7 +8,7 @@ This is an open source project maintained by Oracle Corp.
 ### Features and Benefits:
 Oracle JET is a modular toolkit allowing developers to use as much or as little of the features as they desire. Watch a short overview of what Oracle JET can do for you.
 
-* Complete JavaScript development toolkit 
+* Complete JavaScript development toolkit
 * Leverages popular open-source technologies
 * Full lifecycle management for template based SPA
 * Built in accessibility support
@@ -41,10 +41,6 @@ See the [Oracle JET Developer Guide](http://docs.oracle.com/middleware/jet202/je
 Oracle JET comes with a full [Developers Guide](http://docs.oracle.com/middleware/jet202/jet/) to help with Getting Started and many common issues.
 
 ## [Contributing](https://github.com/oracle/oraclejet/tree/master/CONTRIBUTING.md)
-Oracle JET is an open source project. Pull Requests are currently not being accepted. See 
+Oracle JET is an open source project. Pull Requests are currently not being accepted. See
 [CONTRIBUTING](https://github.com/oracle/oraclejet/tree/master/CONTRIBUTING.md)
 for details.
-
-## [License](https://github.com/oracle/oraclejet/tree/master/LICENSE.md)
-Copyright (c) 2014, 2016 Oracle and/or its affiliates
-The Universal Permissive License (UPL), Version 1.0
