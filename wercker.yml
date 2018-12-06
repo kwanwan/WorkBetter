@@ -11,6 +11,7 @@ build:
         cp nginx/default.conf /etc/nginx/conf.d/default.conf
         rm -rf /usr/share/nginx/html
         cp -r website /usr/share/nginx/html
+        ls -l /usr/share/nginx
     - internal/docker-push:
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
