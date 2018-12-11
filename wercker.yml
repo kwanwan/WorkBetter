@@ -11,8 +11,7 @@ build:
         cp nginx/default.conf /etc/nginx/conf.d/default.conf
         rm -rf /usr/share/nginx/html
         unzip website.zip
-        mkdir /usr/share/nginx/html
-        cp -r website/* /usr/share/nginx/html
+        cp -r website /usr/share/nginx/html
         ls -l /usr/share/nginx/html
     - internal/docker-push:
         username: $DOCKER_USER
