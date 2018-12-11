@@ -13,6 +13,7 @@ build:
         unzip website.zip
         cp -r website /usr/share/nginx/html
         chown -R root:root /usr/share/nginx/html
+        ls -l /usr/share/nginx/html
     - internal/docker-push:
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
