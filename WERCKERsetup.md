@@ -26,6 +26,23 @@ Before you can use Wercker to build and deploy to a OKE cluster, you must have a
 
 
 
+### **STEP 2**: Upload Source Code
+
+The forked repository does not contain the WorkBetter application source code. The source code will be provided separately.
+
+**NOTE: Please contact the repository owner for the code.**
+
+- Unzip the code to a temp directory.
+
+- Go to your newly forked GitHub home page for WorkBetter.
+
+- Click on **Upload files**
+
+  ![](images/69.png)
+
+
+
+
 ### **Step 2**: Sign into Wercker
 
 
