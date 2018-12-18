@@ -32,7 +32,7 @@ The forked repository does not contain the WorkBetter application source code. T
 
 **NOTE: Please contact the repository owner for the code.**
 
-- Unzip the code to a temp directory.
+- The code will be provided as a zip file. There is no need to unzip the file. We will upload the zip file into your repository as is.
 
 - Go to your newly forked GitHub home page for WorkBetter.
 
@@ -40,6 +40,11 @@ The forked repository does not contain the WorkBetter application source code. T
 
   ![](images/69.png)
 
+- Select the zip location `website.zip` and the upload will begin.
+
+  ![](images/93.png)
+
+- Once upload is completed, then Click on **Commit changes** at the bottom of the page.
 
 
 
