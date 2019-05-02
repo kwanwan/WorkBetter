@@ -10,7 +10,9 @@ build:
         cp nginx/nginx.conf /etc/nginx/nginx.conf
         cp nginx/default.conf /etc/nginx/conf.d/default.conf
         rm -rf /usr/share/nginx/html
+        unzip website.zip
         cp -r website /usr/share/nginx/html
+        chmod -R 755 /usr/share/nginx/html
     - internal/docker-push:
         username: $DOCKER_USER
         password: $DOCKER_PASSWORD
@@ -19,15 +21,15 @@ build:
         tag: $WERCKER_GIT_COMMIT
         ports: 80
         cmd: "nginx -g 'daemon off';"
-       
+
 functional-test:
-  box: 
+  box:
     id: $DOCKER_REGISTRY/$DOCKER_REPO
     username: $DOCKER_USER
     password: $DOCKER_PASSWORD
     tag: $WERCKER_GIT_COMMIT
   steps:
-    - script: 
+    - script:
       name: test
       code: |
         nginx
@@ -38,7 +40,7 @@ functional-test:
             echo "Failed"
             exit 1;
         fi
-        
+
 deploy:
   box:
     id: alpine
@@ -47,7 +49,7 @@ deploy:
     - bash-template
 
     - kubectl:
-        name: apply namespace    
+        name: apply namespace
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
